@@ -1,3 +1,4 @@
 .vs/
 bin/
 obj/
+ApiServer/Data/Migrations/

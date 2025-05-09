@@ -1,12 +1,11 @@
 ﻿using ApiServer.Model.DTO;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 
 namespace ApiServer.Controllers
 {
     [ApiController]
-    [Route("api/account")]
-    public class AccountController
+    [Route("api/auth")]
+    public class AuthController
     {
         /// <summary>
         /// 계정 생성
