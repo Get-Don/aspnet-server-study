@@ -5,7 +5,7 @@ namespace ApiServer.Controllers
 {
     [ApiController]
     [Route("api/stage")]
-    public class StageController
+    public class StageController : Controller
     {
         /// <summary>
         /// 스테이지 시작

@@ -2,5 +2,6 @@
 {
     public class LoginResponseDTO
     {
+        public long AccountId { get; set; }
     }
 }

@@ -8,3 +8,5 @@
 # 기술 스택
 - .Net 9.0
 - ASP.NET Core Wep Api (Controller 기반)
+- EntityFrameworkCore
+- SQL Server

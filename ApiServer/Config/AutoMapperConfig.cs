@@ -1,4 +1,6 @@
-﻿using AutoMapper;
+﻿using ApiServer.Model;
+using ApiServer.Model.DTO;
+using AutoMapper;
 
 namespace ApiServer.Config
 {
@@ -6,7 +8,7 @@ namespace ApiServer.Config
     {
         public AutoMapperConfig()
         {
-            
+            CreateMap<Account, LoginResponseDTO>();
         }
     }
 }

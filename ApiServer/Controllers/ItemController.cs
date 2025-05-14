@@ -5,7 +5,7 @@ namespace ApiServer.Controllers
 {
     [ApiController]
     [Route("api/item")]
-    public class ItemController
+    public class ItemController : Controller
     {
         /// <summary>
         /// 무기 장착
