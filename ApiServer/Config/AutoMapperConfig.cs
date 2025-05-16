@@ -2,13 +2,12 @@
 using ApiServer.Model.DTO;
 using AutoMapper;
 
-namespace ApiServer.Config
+namespace ApiServer.Config;
+
+public class AutoMapperConfig : Profile
 {
-    public class AutoMapperConfig : Profile
+    public AutoMapperConfig()
     {
-        public AutoMapperConfig()
-        {
-            CreateMap<Account, LoginResponseDTO>();
-        }
+        CreateMap<Account, LoginResponseDTO>();
     }
 }

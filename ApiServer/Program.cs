@@ -1,16 +1,22 @@
 using ApiServer.Config;
 using ApiServer.Data;
-using ApiServer.Repository;
-using ApiServer.Repository.Interface;
+using ApiServer.Repository.DB;
+using ApiServer.Repository.DB.Interface;
 using Microsoft.EntityFrameworkCore;
+using StackExchange.Redis;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// DB
 builder.Services.AddDbContext<ApplicationDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultSQLConntion"));
 });
+
+// Redis
+builder.Services.AddSingleton<IConnectionMultiplexer>(
+    ConnectionMultiplexer.Connect(builder.Configuration.GetConnectionString("Redis")!)
+);
 
 builder.Services.AddControllers();
 builder.Services.AddOpenApi();
@@ -19,7 +25,6 @@ builder.Services.AddScoped<IAuthRepository, AuthRepository>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
 {
     app.MapOpenApi();

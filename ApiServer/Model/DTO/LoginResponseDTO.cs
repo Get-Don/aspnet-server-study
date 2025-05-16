@@ -1,7 +1,6 @@
-﻿namespace ApiServer.Model.DTO
+﻿namespace ApiServer.Model.DTO;
+
+public class LoginResponseDTO
 {
-    public class LoginResponseDTO
-    {
-        public long AccountId { get; set; }
-    }
+    public long AccountId { get; set; }
 }

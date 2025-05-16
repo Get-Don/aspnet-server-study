@@ -1,6 +1,6 @@
 ﻿using System.Linq.Expressions;
 
-namespace ApiServer.Repository.Interface
+namespace ApiServer.Repository.DB.Interface
 {
     public interface IRepository<T> where T : class
     {

@@ -1,6 +1,5 @@
-﻿namespace ApiServer.Model.DTO
+﻿namespace ApiServer.Model.DTO;
+
+public class EquipWeaponDTO
 {
-    public class EquipWeaponDTO
-    {
-    }
 }

@@ -1,7 +1,7 @@
 ﻿using ApiServer.Model;
 using ApiServer.Model.DTO;
 
-namespace ApiServer.Repository.Interface
+namespace ApiServer.Repository.DB.Interface
 {
     public interface IAuthRepository
     {
